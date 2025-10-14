@@ -118,7 +118,17 @@ if models_loaded:
     # Games type
     games_type = st.sidebar.selectbox("Games Type", ["Summer", "Winter"], 
                                       index=0 if selected_year % 4 == 0 else 1)
-    
+    SUMMER_YEARS = list(range(1896, 2500, 4))  # Summer Olympics every 4 years
+    WINTER_YEARS = list(range(1924, 2500, 4))  # Winter Olympics every 4 years
+
+    valid_years = SUMMER_YEARS if games_type == "Summer" else WINTER_YEARS
+
+    if selected_year not in valid_years:
+        st.warning(f"⚠️ Note: {selected_year} is **not an Olympic year** for the {games_type} Games.")
+        nearest_valid = min(valid_years, key=lambda y: abs(y - selected_year))
+        st.info(f"Automatically adjusted to nearest valid Olympic year: **{nearest_valid}**.")
+        selected_year = nearest_valid    
+
     st.markdown("---")
 
     # --- Use the helper function to get the latest data point for prediction ---
