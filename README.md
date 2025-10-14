@@ -1,7 +1,7 @@
 # 🏅 Olympic Medal Prediction: A Creative Two-Stage Machine Learning Approach
 
-**Course**: Machine Learning (CSE 4th Year)  
-**Team Members**: [Your Names]  
+**Course**: Machine Learning (CSE 5th Sem)  
+**Team Members**: Monisha Sharma (PES2UG23CS906), Nandana Mathew (PES2UG23CS913)  
 **Academic Year**: 2024-2025  
 **Submission Date**: October 2025
 
